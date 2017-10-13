@@ -1,0 +1,39 @@
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+               Apartments
+            </div>
+            <div class="panel-body" data-ng-hide="data">
+                <p>Fetching data...</p>
+            </div>
+            <div class="panel-body" data-ng-show="data">
+
+                <!--<p ng-repeat="x in data.apartments">Street: {{x.street}}</p>-->
+                <div ng-app="" ng-init="data.apartments">
+
+                    <table class="table table-bordered table-striped">
+                       <tr>
+                           <th>Street</th>
+                           <th>Town</th>
+                           <th>Country</th>
+                           <th>Postcode</th>
+                           <th>Cotact Email</th>
+                           <th>Move In Date</th>
+                       </tr>
+                        <tr data-ng-repeat="key in data.apartments">
+                            <td> {{ key.street }} </td>
+                            <td> {{ key.town }} </td>
+                            <td> {{ key.country }} </td>
+                            <td> {{ key.postcode }} </td>
+                            <td> {{ key.contact_email }} </td>
+                            <td> {{ key.move_in }} </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

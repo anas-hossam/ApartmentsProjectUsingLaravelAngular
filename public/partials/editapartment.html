@@ -1,0 +1,81 @@
+<div class="row">
+    <div class="col-lg-12">
+        <a ng-href="/apartment/delete/{{data.apartment.id}}" class="btn  btn-danger pull-right">Delete</a>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+
+                Edit Apartment :
+            </div>
+            <div class="panel-body" data-ng-hide="data">
+                <p>Fetching Data..</p>
+            </div>
+            <div class="panel-body" data-ng-show="data">
+                <!--<form class="form-horizontal" role="form" ng-submit="deleteapartment()">-->
+                <!--<div class="form-group">-->
+                    <!--<input type="hidden" class="form-control" value="{{id}}" id="apartment_id"  ng-model="id">-->
+                    <!--<button type="submit" class="btn btn-primary pull-right"></button>-->
+                <!--</div>-->
+                <!--</form>-->
+
+                <form class="form-horizontal" role="form" ng-submit="updateapartment()">
+                    <!--(ID, move-in-date, street, postcode, town, country, contact e-mail)-->
+                    <input type="hidden" class="form-control" value="{{id}}" id="id"  ng-model="id">
+                    <div class="form-group">
+                        <label for="street" class="col-sm-2 control-label">Street</label>
+
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control"  placeholder="street" id="street"   ng-model="street" >
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="postcode" class="col-sm-2 control-label">Postcode</label>
+
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="postcode"   placeholder="postcode" ng-model="postcode">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="town" class="col-sm-2 control-label">Town</label>
+
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="town"   placeholder="Town" ng-model="town">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="country" class="col-sm-2 control-label">Country</label>
+
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="country"   placeholder="Country" ng-model="country">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="col-sm-2 control-label">Contact Email</label>
+
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="email"   placeholder="Contact Email" ng-model="contact_email">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="move_in" class="col-sm-2 control-label">Move In Date</label>
+
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="move_in"   placeholder="Move In Date" ng-model="move_in">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary pull-right">Update Apatment</button>
+                        </div>
+                    </div>
+                    <p data-ng-show="error" class="error">{{ error }}</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
