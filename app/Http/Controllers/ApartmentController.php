@@ -54,6 +54,14 @@ class ApartmentController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'street' => 'required',
+            'town' => 'required',
+            'country' => 'required',
+            'postcode' => 'required',
+            'contact_email' => 'required',
+            'move_in' => 'required',
+        ]);
         // add new apartment
 
         $token = JWTAuth::getToken();
@@ -112,6 +120,14 @@ class ApartmentController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $this->validate($request, [
+            'street' => 'required',
+            'town' => 'required',
+            'country' => 'required',
+            'postcode' => 'required',
+            'contact_email' => 'required',
+            'move_in' => 'required',
+        ]);
         // update  apartment
         $token = JWTAuth::getToken();
         $user = JWTAuth::toUser($token);
