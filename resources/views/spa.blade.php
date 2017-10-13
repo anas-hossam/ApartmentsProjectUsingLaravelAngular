@@ -42,7 +42,9 @@
             </div>
         </div>
     </div>
-    <div class="container" ng-view=""></div>
+    <div class="container" ng-view="">
+        <div>@include('errors.list')</div>
+    </div>
     <div class="footer">
         <div class="container">
             <p class="muted credit">Example by <a href="http://www.anashossam.esy.es" title="Anas Hossam">Anas Hossam</a></p>

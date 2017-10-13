@@ -50,7 +50,7 @@
                 Data.getApartments(function (res) {
                     $scope.data = res.data;
                 }, function () {
-                    $rootScope.error = 'Failed to fetch Apartments.';
+                    $rootScope.error = res.error||'Failed to fetch Apartments.';
                 });
 
                 // Data.editApartment(function (res) {
@@ -99,7 +99,7 @@
                     $('#move_in').val(res.data.apartment.move_in);
 
                 }, function () {
-                    $rootScope.error = 'Failed to fetch Apartment.';
+                    $rootScope.error = res.error||'Failed to fetch Apartment.';
                 });
 
                 $scope.updateapartment = function () {
